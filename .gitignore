@@ -1,0 +1,8 @@
+# IDE/editor files
+.vscode/
+
+# Output of the go coverage tool
+*.cover
+
+# Build output
+bin/
