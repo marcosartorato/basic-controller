@@ -1,0 +1,23 @@
+# General
+.git
+.gitignore
+.DS_Store
+
+# Go artifacts
+**/*.out
+**/*.test
+**/*.cover
+coverage.out
+coverage.html
+
+# Node / misc (if present)
+node_modules
+dist
+build
+
+# IDE
+.vscode
+.idea
+
+# K3d/Tilt noise
+k3d/**/tmp
