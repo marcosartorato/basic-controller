@@ -42,6 +42,7 @@ USER nonroot:nonroot
 
 # Expose HTTP port for metrics/healthz
 EXPOSE 8080
+EXPOSE 8081
 
 # Run manager binary
 CMD ["/greeting-manager"]

@@ -2,6 +2,8 @@
 
 Minimal Kubernetest controller example/showcase. Includes local pipeline commands (lint/test/build), Docker image, and a quick k8s (k3s via k3d) local environment.
 
+The controller is monitoring changes on the `greeting` CRD objects in the cluster and look for the related `configMap` to update its content with the `greeting`'s `message` field.
+
 ## Docker
 
 ```
