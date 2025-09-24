@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greeting-operator
+  namespace: default
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: greeting-operator } }
+  template:
+    metadata: { labels: { app: greeting-operator } }
+    spec:
+      serviceAccountName: default
+      containers:
+      - name: manager
+        image: k3d-tilt-registry:5000/greeting-operator:latest
+        imagePullPolicy: Always
+        # args:
+        #   - "--metrics-bind-address=:8080"
+        #   - "--health-probe-bind-address=:8081"
+        ports:
+          - name: metrics
+            containerPort: 8080
+          - name: health
+            containerPort: 8081
+        resources:
+          limits:   { cpu: "100m", memory: "128Mi" }
+          requests: { cpu: "100m", memory: "64Mi" }

@@ -1,0 +1,18 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: ctrl
+servers: 1
+agents: 1
+
+# Local registry, exposed on your host at localhost:5000
+registries:
+  create:
+    name: k3d-ctrl-reg
+    host: "0.0.0.0"
+    hostPort: "5000"
+  config: |-
+    mirrors:
+      "k3d-tilt-registry:5000":
+        endpoint:
+          - "http://k3d-ctrl-reg:5000"
