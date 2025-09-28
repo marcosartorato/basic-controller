@@ -68,6 +68,12 @@ and environment variables:
 - `-s`: Omit the symbol table and debug information. Implies the `-w` flag, which can be negated with `-w=0`. Hence, the binary is smaller.
 - `-w`: Omit the DWARF symbol table. Hence, the binary is smaller.
 
+
+## Local environment
+
+See [here](./k3d/README.md) for in dept instructions.
+
+
 ## Notes
 
 - About CRDs, see the [official documentation](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/).

@@ -14,7 +14,7 @@ spec:
       - name: manager
         image: k3d-tilt-registry:5000/greeting-operator:latest
         imagePullPolicy: Always
-        # args:
+        # args: # Example args
         #   - "--metrics-bind-address=:8080"
         #   - "--health-probe-bind-address=:8081"
         ports:
